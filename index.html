@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-	<title>Crystals Collector Game</title>
-	<script src="http://code.jquery.com/jquery.js"></script>
+  <title>Gem thingy!</title>
+  <script
+ src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  
 </head>
+
 <body>
-   <header>
-        <h2 id ="name">Crystals Collector!</h2>
-   </header>
-    <div class="start">
-        <div class="total"></div>
-    	
-        <div class="result">
-        	Wins:<div id="wins"></div>
-        	Losses:<div id="losses"></div>
-        </div>
+<header>
+      <h1>Crystal/Gem Collector!</h1>
+</header>
+  <p>
+      Instructions:<br><br>
+      You will be given a random number at the start of the game.<br>
+      There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.<br>
+      You wil the game by matching your total score to random number, you lose the game if your total score goes above the random number.<br>
+      The value of each crystal is hidden from you until you click on it.<br>
+      Each time when the game starts, the game will change the values of each crystal.
+  </p>
+    <div id="currentScore"></div>
+      Wins: <span id="winsCountDisplay">0</span><br>
+      Loses: <span id="losesCountDisplay">0</span>
     </div>
-    <div class="crystals">
-        <img alt="red" class="click" id="red">
-        <img alt="blue" class="click" id="blue">
-        <img alt="yellow" class="click" id="yellow">
-        <img alt="green" class="click" id="green">
-   </div>
-   <div class="score">
-        <p>Your total score is:</p>
-   </div>
-   <div class="addition"></div>
-   <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <div id="annouceDisplay"></div>
+  </div>
+  <div>
+    <div>
+      <button id="ruby" data-value=""><img alt="Ruby"></button>
+      <button id="emerald" data-value=""><img alt="Emerald"></button>
+      <button id="sapphire" data-value=""><img alt="Sapphire">
+      <button id="diamond" data-value=""><img alt="Diamond">
+    </div>
+  </div>
+  <div>
+    <div>
+      Your total score is: <div id="currentUserScore">0</div>
+    </div>
+  </div>
+</div>
+<script text="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
